@@ -1,0 +1,12 @@
+YANDEX_LOGO = 'logo'
+SEARCH_FIELD = 'search2__input'
+IMAGES = 'tab-images'
+VIDEO = 'tab-video'
+MAIL = 'tab-mail'
+MAPS = 'tab-maps'
+APPMETRICA = 'tab-appmetrica'
+TRANSLATE = 'tab-translate'
+BROWSER = 'tab-browser'
+KEYBOARD = 'input__keyboard-button'
+KEYBOARD_POPUP = 'keyboard-popup'
+
