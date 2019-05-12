@@ -28,9 +28,11 @@ class HomeTestCases(BaseTestCase):
                 "There is wrong status code for {0}".format(nav_item))
 
     def test_keyboard_icon(self):
+        self.page_object.remove_cookie_banner()
         self.page_object.keyboard_icon.click()
-        # check if there is keyboard popup
-        pass
+        self.assertTrue(self.page_object.is_keyboard_popup_displayed(),
+                        "Keyboard popup did not show after clicking keyboard icon")
+        self.page_object.close_keyboard_popup()
 
 
 if __name__ == "__main__":

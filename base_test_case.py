@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from elementium.drivers.se import SeElements
 
 
 class BaseTestCase(unittest.TestCase):
@@ -10,10 +11,10 @@ class BaseTestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path=r"C:\chromedriver.exe")
-        cls.driver.get(cls.url)
+        cls.driver = SeElements(webdriver.Chrome(executable_path=r"C:\chromedriver.exe"))
+        cls.driver.navigate(cls.url)
         cls.page_object = cls.page_object_class(cls.driver)
 
     @classmethod
     def tearDownClass(cls):
-        cls.driver.quit()
+        cls.driver.browser.quit()
