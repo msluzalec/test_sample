@@ -1,6 +1,12 @@
+# Python Standard Library
+import unittest
+
+# Third party modules
+from selenium.webdriver.common.keys import Keys
+
+# Own
 from base_test_case import BaseTestCase
 from home_object import HomePageObject
-import unittest
 
 
 class HomeTestCases(BaseTestCase):
@@ -33,6 +39,15 @@ class HomeTestCases(BaseTestCase):
         self.assertTrue(self.page_object.is_keyboard_popup_displayed(),
                         "Keyboard popup did not show after clicking keyboard icon")
         self.page_object.close_keyboard_popup()
+
+    def test_search(self):
+        TEXT_TO_SEARCH = 'Python'
+        self.page_object.search_field.write(TEXT_TO_SEARCH)
+        self.page_object.search_button.click()
+        title = self.page_object.get_position_title()
+        self.assertIn(TEXT_TO_SEARCH, title,
+                      "Searched word is absent in the first position title")
+        self.driver.navigate(self.url)
 
 
 if __name__ == "__main__":

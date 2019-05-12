@@ -1,6 +1,9 @@
+# Python Standard Library
 import unittest
-from selenium import webdriver
+
+# Third part modules
 from elementium.drivers.se import SeElements
+from selenium import webdriver
 
 
 class BaseTestCase(unittest.TestCase):

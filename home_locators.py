@@ -1,5 +1,6 @@
 YANDEX_LOGO = '.logo'
-SEARCH_FIELD = '.search2__input'
+SEARCH_FIELD = '.input__control'
+SEARCH_BUTTON = '.search2__button'
 IMAGES = '#tab-images'
 VIDEO = '#tab-video'
 MAIL = '#tab-mail'
@@ -11,4 +12,4 @@ KEYBOARD = '.input__keyboard-button'
 KEYBOARD_POPUP = '.keyboard-popup'
 COOKIE_GOT_IT = '.lg-cc__button_type_action'
 KEYBOARD_POPUP_CLOSE = '.keyboard-popup__close'
-
+POSITION_TITLES = '.organic__url-text'

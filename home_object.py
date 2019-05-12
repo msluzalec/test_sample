@@ -1,5 +1,8 @@
-import home_locators as locators
+# Third party modules
 import requests
+
+# Own
+import home_locators as locators
 
 
 class HomePageObject:
@@ -18,6 +21,7 @@ class HomePageObject:
         self.driver = driver
         self.yandex_logo = self.driver.find(locators.YANDEX_LOGO)
         self.search_field = self.driver.find(locators.SEARCH_FIELD)
+        self.search_button = self.driver.find(locators.SEARCH_BUTTON)
         self.keyboard_icon = self.driver.find(locators.KEYBOARD)
         self.cookie_got_it_button = self.driver.find(locators.COOKIE_GOT_IT, wait=True)
 
@@ -54,3 +58,8 @@ class HomePageObject:
         self.driver.find(locators.KEYBOARD_POPUP_CLOSE).click()
         self.driver.find(locators.KEYBOARD_POPUP).until(
             lambda e: len(e) == 0, ttl=5)
+
+    def get_position_title(self):
+        position = self.driver.find(
+            locators.POSITION_TITLES).until(lambda e: len(e) > 0)
+        return position.get(0).attribute('textContent')
