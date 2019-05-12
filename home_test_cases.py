@@ -1,9 +1,6 @@
 # Python Standard Library
 import unittest
 
-# Third party modules
-from selenium.webdriver.common.keys import Keys
-
 # Own
 from base_test_case import BaseTestCase
 from home_object import HomePageObject
