@@ -12,3 +12,4 @@ It uses Selenium with Elementium (http://github.com/actmd/elementium) and Page O
 After fulfilling above requirements, clone this repository and run `pip install -r requirements.txt` in the project root.
 
 Test
+Test 2
